@@ -11,9 +11,9 @@ STRAVA_CLIENT_SECRET = "xxx"
 STRAVA_REFRESH_TOKEN = "xxx"
 
 # === Connexion PostgreSQL ===
-DB_NAME = "strava"
-DB_USER = "airflow_user"
-DB_PASSWORD = "test_strava"
+DB_NAME = "xxx"
+DB_USER = "xxx"
+DB_PASSWORD = "xxx"
 DB_HOST = "localhost"
 DB_PORT = "5432"
 engine = create_engine(f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
