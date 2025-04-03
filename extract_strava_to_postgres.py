@@ -6,9 +6,9 @@ import time
 from datetime import datetime
 
 # === Identifiants API ===
-STRAVA_CLIENT_ID = "153745"
-STRAVA_CLIENT_SECRET = "7f4fd98d47e32b6432759f6d1b80022fa649083f"
-STRAVA_REFRESH_TOKEN = "9fa66efea2fba60cd88bac01a1d76dc5822bb17b"
+STRAVA_CLIENT_ID = "xxx"
+STRAVA_CLIENT_SECRET = "xxx"
+STRAVA_REFRESH_TOKEN = "xxx"
 
 # === Connexion PostgreSQL ===
 DB_NAME = "strava"
@@ -18,7 +18,7 @@ DB_HOST = "localhost"
 DB_PORT = "5432"
 engine = create_engine(f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
 
-# === 1. Rafraîchir le token Strava ===
+# === Rafraîchir le token Strava ===
 print("🔄 Rafraîchissement du token...")
 refresh_response = requests.post(
     "https://www.strava.com/api/v3/oauth/token",
@@ -32,7 +32,7 @@ refresh_response = requests.post(
 refresh_data = refresh_response.json()
 access_token = refresh_data["access_token"]
 
-# === 2. Récupérer toutes les activités avec pagination ===
+# === Récupérer toutes les activités avec pagination ===
 print("📥 Récupération de toutes les activités...")
 
 headers = {"Authorization": f"Bearer {access_token}"}
@@ -58,7 +58,7 @@ while True:
 df = pd.json_normalize(all_activities)
 print(f"✅ Total récupéré : {len(df)} activités")
 
-# === 3. Insérer dans PostgreSQL ===
+# === Insérer dans PostgreSQL ===
 from sqlalchemy import text
 with engine.begin() as conn:
     conn.execute(text("DELETE FROM activities"))
