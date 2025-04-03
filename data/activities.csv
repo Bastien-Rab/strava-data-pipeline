@@ -1,0 +1,3 @@
+id,name,start_date_local,distance,moving_time,average_speed,type
+123456,Sortie vélo,2024-03-01T10:00:00Z,25000,3600,6.94,Ride
+123457,Footing matinal,2024-03-02T07:30:00Z,7000,2400,2.91,Run

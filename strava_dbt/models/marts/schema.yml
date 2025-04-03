@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: fct_activities_stats
+    description: "Indicateurs agrégés des activités par mois et type"
+    columns:
+      - name: type
+        description: "Type d'activité (Run, Ride, etc.)"
+      - name: mois
+        description: "Mois de l'activité (tronqué au 1er du mois)"
+      - name: nb_activites
+        description: "Nombre total d'activités sur le mois"
+      - name: total_km
+        description: "Distance totale en kilomètres"
+      - name: total_minutes
+        description: "Temps total passé à s'entraîner (en minutes)"
+      - name: vitesse_moyenne
+        description: "Vitesse moyenne des activités (km/h)"
+      - name: frequence_cardiaque_moyenne
+        description: "Fréquence cardiaque moyenne (bpm)"
+      - name: suffer_score_moyen
+        description: "Score de souffrance moyen (selon Strava)"
+      - name: temperature_moyenne
+        description: "Température moyenne pendant les activités (°C)"
+      - name: total_kudos
+        description: "Nombre total de kudos reçus sur le mois"
+      - name: total_achievements
+        description: "Nombre total d'achèvements sur le mois"

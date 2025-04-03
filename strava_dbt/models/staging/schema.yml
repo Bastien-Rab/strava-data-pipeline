@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_activities
+    description: "Nettoyage des données d’activités Strava"
+    columns:
+      - name: activity_id
+        tests:
+          - not_null
+          - unique
+      - name: start_date_local
+        description: "Date locale de l’activité"
+      - name: distance_km
+        description: "Distance en kilomètres"
+      - name: suffer_score
+        description: "Score de souffrance calculé par Strava"
+      - name: average_temp
+        description: "Température moyenne pendant l’activité (°C)"
+
