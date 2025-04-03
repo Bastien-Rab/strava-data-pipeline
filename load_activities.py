@@ -5,8 +5,8 @@ from sqlalchemy import create_engine
 
 # === Connexion à PostgreSQL ===
 DB_NAME = "strava"
-DB_USER = "airflow_user"
-DB_PASSWORD = "test_strava"
+DB_USER = "xxx"
+DB_PASSWORD = "xxx"
 DB_HOST = "localhost"
 DB_PORT = "5432"
 
