@@ -1,9 +1,9 @@
 import psycopg2
 
 conn = psycopg2.connect(
-    dbname="strava",
-    user="airflow_user",
-    password="test_strava",
+    dbname="xxx",
+    user="xxx",
+    password="xxx",
     host="localhost",
     port="5432"
 )
