@@ -1,19 +1,12 @@
 import requests
 
-# Remplace ces valeurs avec les tiennes :
-client_id = "153745"
-client_secret = "7f4fd98d47e32b6432759f6d1b80022fa649083f"
+client_id = "xxx"
+client_secret = "xxx"
 redirect_uri = "http://localhost"
 
-# Étape 1 : Afficher l'URL à visiter pour autoriser
-#url = (
+# Récupérer le token une fois le code obtenu
 
-#print("👉 Ouvre cette URL dans ton navigateur :\n")
-#print(url)
-
-# Étape 2 : Récupérer le token une fois le code obtenu
-
-code = "e21eb1a8f82ea8eb8b0ff00dfbf84fc83132717f"
+code = "xxx"
 
 response = requests.post("https://www.strava.com/api/v3/oauth/token", data={
     "client_id": client_id,
